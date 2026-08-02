@@ -222,6 +222,14 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
         </p>
       </div>
 
+      <div className="mt-3 flex items-center gap-3 lg:hidden">
+        <span className="h-px flex-1 bg-white/15" />
+        <svg viewBox="0 0 20 20" fill="currentColor" className="h-3 w-3 text-gold-600/70">
+          <path d="M10 2 11.6 7 17 7.8 13.2 11.4 14.2 17 10 14.3 5.8 17l1-5.6L3 7.8 8.4 7Z" />
+        </svg>
+        <span className="h-px flex-1 bg-white/15" />
+      </div>
+
       <div className="mt-3 grid grid-cols-3 gap-x-2 gap-y-3 sm:grid-cols-6">
         {prayers.map((p) => {
           const isNext = next !== null && p.key === next.key;

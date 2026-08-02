@@ -55,7 +55,16 @@ export default async function HomePage() {
 
         <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-8 pt-24 sm:pt-28">
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gold-600">
+            <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gold-600">
+              <svg
+                aria-hidden
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-3.5 w-3.5 shrink-0 lg:hidden"
+              >
+                <path d="M17 12.5A6.5 6.5 0 0 1 7.5 3a7 7 0 1 0 9.5 9.5Z" />
+                <path d="m16.2 2 .5 1.3L18 3.8l-1.3.5-.5 1.3-.5-1.3L14.4 3.8l1.3-.5.5-1.3Z" />
+              </svg>
               {t("hero.eyebrow")}
             </p>
             <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl">
@@ -70,7 +79,7 @@ export default async function HomePage() {
                 href={MAPS_DIRECTIONS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-brand-900 hover:bg-gold-400"
+                className="flex items-center gap-2 rounded-xl bg-brand-700 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-600 lg:rounded-full lg:bg-gold-500 lg:text-brand-900 lg:hover:bg-gold-400"
               >
                 <svg
                   aria-hidden
@@ -84,7 +93,7 @@ export default async function HomePage() {
               </a>
               <Link
                 href="/quran-school"
-                className="flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                className="flex items-center gap-2 rounded-xl border border-gold-500/70 px-6 py-3 text-sm font-semibold text-gold-500 hover:bg-white/10 lg:rounded-full lg:border-white/40 lg:text-white"
               >
                 <svg
                   aria-hidden
