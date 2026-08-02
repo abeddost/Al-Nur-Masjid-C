@@ -81,11 +81,10 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
   const prayers = [
     { key: "fajr", label: t("fajr"), time: data.fajr },
     { key: "shuruq", label: t("shuruq"), time: data.shuruq, isMarker: true },
-    {
-      key: "dhuhr",
-      label: isFriday && data.jumua ? t("jumua") : t("dhuhr"),
-      time: isFriday && data.jumua ? data.jumua : data.dhuhr,
-    },
+    { key: "dhuhr", label: t("dhuhr"), time: data.dhuhr },
+    ...(data.jumua
+      ? [{ key: "jumua", label: t("jumua"), time: data.jumua }]
+      : []),
     { key: "asr", label: t("asr"), time: data.asr },
     { key: "maghrib", label: t("maghrib"), time: data.maghrib },
     { key: "isha", label: t("isha"), time: data.isha },
@@ -93,8 +92,12 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
 
   let next: { key: string; label: string; time: string; at: Date } | null = null;
   if (now) {
+    // On Fridays the congregational prayer happens at Jumu'ah time instead
+    // of the regular Dhuhr time, so Dhuhr is skipped as a countdown target
+    // that day (and vice versa on other days).
     const candidates = prayers
       .filter((p) => !p.isMarker)
+      .filter((p) => (isFriday ? p.key !== "dhuhr" : p.key !== "jumua"))
       .map((p) => ({ ...p, at: atTime(now, p.time) }));
     next =
       candidates.find((p) => p.at.getTime() > now.getTime()) ?? {
