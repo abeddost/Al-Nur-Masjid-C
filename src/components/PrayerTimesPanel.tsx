@@ -117,7 +117,7 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
     : "";
 
   return (
-    <div className="w-full max-w-md rounded-2xl border border-white/15 bg-brand-900/70 p-5 shadow-xl backdrop-blur-md sm:p-6">
+    <div className="w-full max-w-md rounded-2xl border border-white/15 bg-brand-900/70 p-4 shadow-xl backdrop-blur-md sm:p-5">
       <div className="flex items-center justify-between gap-3">
         <p className="text-xs font-semibold uppercase tracking-wide text-white/70">
           {t("eyebrow")}
@@ -125,7 +125,7 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
         <p className="text-xs text-white/60">{dateLabel}</p>
       </div>
 
-      <div className="mt-3 flex items-baseline justify-between gap-3">
+      <div className="mt-2 flex items-baseline justify-between gap-3">
         <p className="text-sm text-white/70">
           {t("nextPrayerLabel")}{" "}
           <span className="font-semibold text-gold-600">
@@ -137,7 +137,7 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
         </p>
       </div>
 
-      <div className="mt-4 grid grid-cols-3 gap-x-2 gap-y-4 sm:grid-cols-6">
+      <div className="mt-3 grid grid-cols-3 gap-x-2 gap-y-3 sm:grid-cols-6">
         {prayers.map((p) => {
           const isNext = next !== null && p.key === next.key;
           return (
@@ -164,7 +164,7 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
         href={data.fullTimetableUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-5 flex items-center justify-center gap-1 border-t border-white/10 pt-4 text-sm font-semibold text-white hover:text-gold-400"
+        className="mt-3 flex items-center justify-center gap-1 border-t border-white/10 pt-3 text-sm font-semibold text-white hover:text-gold-400"
       >
         {t("viewFullTimetable")}
         <span aria-hidden>→</span>
