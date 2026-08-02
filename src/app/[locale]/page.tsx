@@ -37,7 +37,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="relative flex min-h-[600px] flex-col justify-end overflow-hidden lg:h-[760px]">
+      <section className="relative flex min-h-[600px] flex-col justify-end overflow-hidden lg:h-screen">
         <Image
           src={heroImageSrc}
           alt="Prayer hall at Mosque An-Nur"
