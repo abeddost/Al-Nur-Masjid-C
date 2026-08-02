@@ -104,7 +104,13 @@
         "headlineHighlight": "in Wiesbaden",
         "subtitle": "A welcoming mosque for prayer, education and community – open to everyone.",
         "primaryCta": "Visit us",
-        "secondaryCta": "Quran lessons"
+        "secondaryCta": "Quran lessons",
+        "features": [
+          { "icon": "/images/mitglieder.svg", "label": "Welcoming community" },
+          { "icon": "/images/koran.svg", "label": "Islamic education" },
+          { "icon": "/images/spende.svg", "label": "Charity & outreach" },
+          { "icon": "/images/veranstaltungen.svg", "label": "Events & activities" }
+        ]
       },
       "quranSchoolTeaser": {
         "eyebrow": "Quran school",

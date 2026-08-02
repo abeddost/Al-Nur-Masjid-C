@@ -104,7 +104,13 @@
         "headlineHighlight": "in Wiesbaden",
         "subtitle": "Eine einladende Moschee für Gebet, Bildung und Gemeinschaft – offen für alle.",
         "primaryCta": "Besuchen Sie uns",
-        "secondaryCta": "Koranunterricht"
+        "secondaryCta": "Koranunterricht",
+        "features": [
+          { "icon": "/images/mitglieder.svg", "label": "Einladende Gemeinschaft" },
+          { "icon": "/images/koran.svg", "label": "Islamische Bildung" },
+          { "icon": "/images/spende.svg", "label": "Wohltätigkeit & Hilfe" },
+          { "icon": "/images/veranstaltungen.svg", "label": "Veranstaltungen & Aktivitäten" }
+        ]
       },
       "quranSchoolTeaser": {
         "eyebrow": "Koranschule",

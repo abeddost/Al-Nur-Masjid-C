@@ -1,16 +1,22 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import FeatureList from "@/components/FeatureList";
 import PrayerTimesPanel from "@/components/PrayerTimesPanel";
+import HeroFeatureStrip from "@/components/HeroFeatureStrip";
 import TeaserSection from "@/components/TeaserSection";
 import MapSection from "@/components/MapSection";
 import { getMawaqitPrayerTimes } from "@/lib/mawaqit";
 import { MAPS_DIRECTIONS_URL } from "@/config/location";
+import { rtlLocales, type Locale } from "@/i18n/routing";
 
 export default async function HomePage() {
   const t = await getTranslations("pages.home");
+  const locale = await getLocale();
   const prayerTimes = await getMawaqitPrayerTimes();
+  const heroImageSrc = rtlLocales.has(locale as Locale)
+    ? "/hero-section-rtl.png"
+    : "/hero-section-ltr.png";
   const icons = [
     "/images/koran.svg",
     "/images/veranstaltungen.svg",
@@ -24,21 +30,23 @@ export default async function HomePage() {
       ...f,
       icon: icons[i],
     }));
+  const heroFeatures = t.raw("hero.features") as {
+    label: string;
+    icon: string;
+  }[];
+
   return (
     <>
-      <section className="relative flex min-h-[640px] flex-col overflow-hidden">
+      <section className="relative flex min-h-[760px] flex-col justify-end overflow-hidden">
         <Image
-          src="/hero-section.png"
+          src={heroImageSrc}
           alt="Prayer hall at Mosque An-Nur"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/85 to-brand-900/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/20 to-transparent" />
-        <div className="absolute inset-0 bg-black/15" />
 
-        <div className="relative z-10 mx-auto flex w-full max-w-[1120px] flex-1 flex-col justify-center px-5 py-24 sm:py-28">
+        <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-10 pt-44 sm:pt-56">
           <div className="max-w-xl">
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-600">
               {t("hero.eyebrow")}
@@ -67,7 +75,8 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="mt-10 flex justify-start lg:justify-end">
+          <div className="mt-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <HeroFeatureStrip features={heroFeatures} />
             <PrayerTimesPanel data={prayerTimes} />
           </div>
         </div>

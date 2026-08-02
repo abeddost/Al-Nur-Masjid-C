@@ -104,7 +104,13 @@
         "headlineHighlight": "در ویسبادن",
         "subtitle": "مسجدی پذیرا برای نماز، آموزش و اجتماع – برای همه باز است.",
         "primaryCta": "دیدن ما",
-        "secondaryCta": "آموزش قرآن"
+        "secondaryCta": "آموزش قرآن",
+        "features": [
+          { "icon": "/images/mitglieder.svg", "label": "اجتماعی پذیرا" },
+          { "icon": "/images/koran.svg", "label": "آموزش اسلامی" },
+          { "icon": "/images/spende.svg", "label": "خیریه و کمک" },
+          { "icon": "/images/veranstaltungen.svg", "label": "برنامه‌ها و فعالیت‌ها" }
+        ]
       },
       "quranSchoolTeaser": {
         "eyebrow": "مکتب قرآن",
