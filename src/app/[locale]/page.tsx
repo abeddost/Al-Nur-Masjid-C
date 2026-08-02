@@ -39,11 +39,18 @@ export default async function HomePage() {
     <>
       <section className="relative flex min-h-[600px] flex-col justify-end overflow-hidden lg:h-screen">
         <Image
+          src="/hero-section-mobile.png"
+          alt="Prayer hall at Mosque An-Nur"
+          fill
+          priority
+          className="block object-cover object-[center_70%] lg:hidden"
+        />
+        <Image
           src={heroImageSrc}
           alt="Prayer hall at Mosque An-Nur"
           fill
           priority
-          className="object-cover object-[center_70%]"
+          className="hidden object-cover object-[center_70%] lg:block"
         />
 
         <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-8 pt-24 sm:pt-28">
