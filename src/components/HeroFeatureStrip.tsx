@@ -7,11 +7,15 @@ export type HeroFeature = {
 
 export default function HeroFeatureStrip({
   features,
+  className = "flex",
 }: {
   features: HeroFeature[];
+  className?: string;
 }) {
   return (
-    <div className="flex flex-wrap gap-2 rounded-2xl border border-white/15 bg-brand-900/60 px-4 py-2.5 backdrop-blur-md sm:gap-4">
+    <div
+      className={`${className} flex-wrap gap-2 rounded-2xl border border-white/15 bg-brand-900/60 px-4 py-2.5 backdrop-blur-md sm:gap-4`}
+    >
       {features.map((f) => (
         <div key={f.label} className="flex items-center gap-2.5">
           <Image src={f.icon} alt="" width={20} height={20} />

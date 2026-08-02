@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import type { PrayerTimes } from "@/lib/mawaqit";
+import { MOSQUE_ADDRESS } from "@/config/location";
 
 function berlinNow(timezone: string): Date {
   const parts = new Intl.DateTimeFormat("en-US", {
@@ -43,6 +44,80 @@ function formatCountdown(ms: number): string {
   return `${h}:${m}:${s}`;
 }
 
+type IconType = "moon" | "sun" | "sunrise" | "sunset" | "star";
+
+function PrayerIcon({ type, className }: { type: IconType; className?: string }) {
+  const common = { viewBox: "0 0 24 24", fill: "none", className, "aria-hidden": true };
+  switch (type) {
+    case "moon":
+      return (
+        <svg {...common}>
+          <path
+            d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "sun":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.6" />
+          <path
+            d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6M18.4 18.4l-1.6-1.6M7.2 7.2 5.6 5.6"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "sunrise":
+      return (
+        <svg {...common}>
+          <path d="M5 18h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <path
+            d="M7.5 18a4.5 4.5 0 0 1 9 0"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 8v3M8 11.5l1.4 1.4M16 11.5l-1.4 1.4"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "sunset":
+      return (
+        <svg {...common}>
+          <path d="M5 18h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <path
+            d="M7.5 15a4.5 4.5 0 0 1 9 0"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 15V8M8 11.5 12 8l4 3.5"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "star":
+      return (
+        <svg {...common} fill="currentColor">
+          <path d="M12 2.5 14.4 9l6.6.3-5.2 4.2L17.6 20 12 16.3 6.4 20l1.8-6.5L3 9.3 9.6 9Z" />
+        </svg>
+      );
+  }
+}
+
 export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null }) {
   const t = useTranslations("pages.home.prayerTimes");
   const appLocale = useLocale();
@@ -79,15 +154,15 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
   const now = mounted ? berlinNow(data.timezone) : null;
   const isFriday = now ? now.getDay() === 5 : false;
 
-  const prayers = [
-    { key: "fajr", label: t("fajr"), time: data.fajr },
-    { key: "dhuhr", label: t("dhuhr"), time: data.dhuhr },
+  const prayers: { key: string; label: string; time: string; icon: IconType }[] = [
+    { key: "fajr", label: t("fajr"), time: data.fajr, icon: "moon" },
+    { key: "dhuhr", label: t("dhuhr"), time: data.dhuhr, icon: "sun" },
     ...(data.jumua
-      ? [{ key: "jumua", label: t("jumua"), time: data.jumua }]
+      ? [{ key: "jumua", label: t("jumua"), time: data.jumua, icon: "star" as IconType }]
       : []),
-    { key: "asr", label: t("asr"), time: data.asr },
-    { key: "maghrib", label: t("maghrib"), time: data.maghrib },
-    { key: "isha", label: t("isha"), time: data.isha },
+    { key: "asr", label: t("asr"), time: data.asr, icon: "sunrise" },
+    { key: "maghrib", label: t("maghrib"), time: data.maghrib, icon: "sunset" },
+    { key: "isha", label: t("isha"), time: data.isha, icon: "moon" },
   ];
 
   let next: { key: string; label: string; time: string; at: Date } | null = null;
@@ -119,13 +194,23 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
   return (
     <div className="w-full max-w-md rounded-2xl border border-white/15 bg-brand-900/70 p-4 shadow-xl backdrop-blur-md sm:p-5">
       <div className="flex items-center justify-between gap-3">
-        <p className="text-xs font-semibold uppercase tracking-wide text-white/70">
-          {t("eyebrow")}
-        </p>
-        <p className="text-xs text-white/60">{dateLabel}</p>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-white/70">
+            {t("eyebrow")}
+          </p>
+          <p className="text-xs text-white/60">{dateLabel}</p>
+        </div>
+        <a
+          href={data.fullTimetableUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whitespace-nowrap rounded-full border border-white/30 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/10"
+        >
+          {t("viewFullTimetable")}
+        </a>
       </div>
 
-      <div className="mt-2 flex items-baseline justify-between gap-3">
+      <div className="mt-3 flex items-baseline justify-between gap-3">
         <p className="text-sm text-white/70">
           {t("nextPrayerLabel")}{" "}
           <span className="font-semibold text-gold-600">
@@ -142,14 +227,18 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
           const isNext = next !== null && p.key === next.key;
           return (
             <div key={p.key} className="text-center">
+              <PrayerIcon
+                type={p.icon}
+                className={`mx-auto h-5 w-5 ${isNext ? "text-gold-600" : "text-white/50"}`}
+              />
               <p
-                className={`text-[11px] font-semibold uppercase tracking-wide ${
+                className={`mt-1 text-[11px] font-semibold uppercase tracking-wide ${
                   isNext ? "text-gold-600" : "text-white/60"
                 }`}
               >
                 {p.label}
               </p>
-              <p className="mt-1 font-serif text-lg font-semibold tabular-nums text-white">
+              <p className="mt-0.5 font-serif text-lg font-semibold tabular-nums text-white">
                 {p.time}
               </p>
               {isNext && (
@@ -160,15 +249,12 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
         })}
       </div>
 
-      <a
-        href={data.fullTimetableUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-3 flex items-center justify-center gap-1 border-t border-white/10 pt-3 text-sm font-semibold text-white hover:text-gold-400"
-      >
-        {t("viewFullTimetable")}
-        <span aria-hidden>→</span>
-      </a>
+      <div className="mt-3 flex items-center justify-center gap-1.5 rounded-full border-t border-white/10 pt-3 text-xs text-white/60">
+        <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 shrink-0">
+          <path d="M10 2a6 6 0 0 0-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 0 0-6-6Zm0 8.2A2.2 2.2 0 1 1 10 5.8a2.2 2.2 0 0 1 0 4.4Z" />
+        </svg>
+        <span>{MOSQUE_ADDRESS}</span>
+      </div>
     </div>
   );
 }

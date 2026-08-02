@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { navItems } from "@/config/nav";
 import HeaderCtaButtons from "./HeaderCtaButtons";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header({ overlay = false }: { overlay?: boolean }) {
   const t = useTranslations();
@@ -162,6 +163,12 @@ export default function Header({ overlay = false }: { overlay?: boolean }) {
               </div>
             );
           })}
+
+          <div
+            className={`mt-4 border-t pt-4 ${overlay ? "border-white/20" : "border-brand-100"}`}
+          >
+            <LanguageSwitcher variant={overlay ? "dark" : "light"} />
+          </div>
         </nav>
       )}
     </header>

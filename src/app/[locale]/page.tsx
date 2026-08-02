@@ -55,6 +55,7 @@ export default async function HomePage() {
               {t("hero.headlineLead")}{" "}
               <span className="text-gold-600">{t("hero.headlineHighlight")}</span>
             </h1>
+            <span className="mt-3 block h-0.5 w-14 rounded-full bg-gold-600" />
             <p className="mt-3 text-white/80">{t("hero.subtitle")}</p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -62,21 +63,37 @@ export default async function HomePage() {
                 href={MAPS_DIRECTIONS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-brand-900 hover:bg-gold-400"
+                className="flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-brand-900 hover:bg-gold-400"
               >
+                <svg
+                  aria-hidden
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="h-4 w-4"
+                >
+                  <path d="M10 2a5 5 0 0 0-5 5c0 4 5 11 5 11s5-7 5-11a5 5 0 0 0-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" />
+                </svg>
                 {t("hero.primaryCta")}
               </a>
               <Link
                 href="/quran-school"
-                className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                className="flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
+                <svg
+                  aria-hidden
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="h-4 w-4"
+                >
+                  <path d="M10 3 2 6.5 10 10l8-3.5L10 3Zm-6.5 6 1 .44V13c0 1.4 2.5 3 5.5 3s5.5-1.6 5.5-3V9.44l1-.44v4.56a1 1 0 1 0 2 0V8.2a1 1 0 0 0-.6-.92L10.4 3.1a1 1 0 0 0-.8 0L1.6 6.5a1 1 0 0 0 0 1.83l1.9.84V9Z" />
+                </svg>
                 {t("hero.secondaryCta")}
               </Link>
             </div>
           </div>
 
           <div className="mt-8 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
-            <HeroFeatureStrip features={heroFeatures} />
+            <HeroFeatureStrip features={heroFeatures} className="hidden lg:flex" />
             <PrayerTimesPanel data={prayerTimes} />
           </div>
         </div>
