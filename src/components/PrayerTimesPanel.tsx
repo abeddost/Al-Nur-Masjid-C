@@ -125,15 +125,17 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
         <p className="text-xs text-white/60">{dateLabel}</p>
       </div>
 
-      <p className="mt-2 text-sm text-white/70">
-        {t("nextPrayerLabel")}{" "}
-        <span className="font-semibold text-gold-400">
-          {next ? next.label : " "}
-        </span>{" "}
-        <span className="tabular-nums text-white">
+      <div className="mt-3 flex items-baseline justify-between gap-3">
+        <p className="text-sm text-white/70">
+          {t("nextPrayerLabel")}{" "}
+          <span className="font-semibold text-gold-600">
+            {next ? next.label : " "}
+          </span>
+        </p>
+        <p className="font-serif text-2xl font-bold tabular-nums text-white sm:text-3xl">
           {diffMs !== null ? formatCountdown(diffMs) : "--:--:--"}
-        </span>
-      </p>
+        </p>
+      </div>
 
       <div className="mt-4 grid grid-cols-3 gap-x-2 gap-y-4 sm:grid-cols-6">
         {prayers.map((p) => {
@@ -142,7 +144,7 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
             <div key={p.key} className="text-center">
               <p
                 className={`text-[11px] font-semibold uppercase tracking-wide ${
-                  isNext ? "text-gold-400" : "text-white/60"
+                  isNext ? "text-gold-600" : "text-white/60"
                 }`}
               >
                 {p.label}
@@ -151,7 +153,7 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
                 {p.time}
               </p>
               {isNext && (
-                <span className="mx-auto mt-1 block h-0.5 w-6 rounded-full bg-gold-400" />
+                <span className="mx-auto mt-1 block h-0.5 w-6 rounded-full bg-gold-600" />
               )}
             </div>
           );

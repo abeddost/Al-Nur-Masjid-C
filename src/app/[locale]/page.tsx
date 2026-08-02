@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import FeatureList from "@/components/FeatureList";
 import PrayerTimesPanel from "@/components/PrayerTimesPanel";
-import HeroFeatureStrip from "@/components/HeroFeatureStrip";
 import TeaserSection from "@/components/TeaserSection";
 import MapSection from "@/components/MapSection";
 import { getMawaqitPrayerTimes } from "@/lib/mawaqit";
@@ -25,14 +24,9 @@ export default async function HomePage() {
       ...f,
       icon: icons[i],
     }));
-  const heroFeatures = t.raw("hero.features") as {
-    label: string;
-    icon: string;
-  }[];
-
   return (
     <>
-      <section className="relative flex min-h-[760px] flex-col justify-end overflow-hidden">
+      <section className="relative flex min-h-[640px] flex-col overflow-hidden">
         <Image
           src="/hero-section.png"
           alt="Prayer hall at Mosque An-Nur"
@@ -40,17 +34,18 @@ export default async function HomePage() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/75 to-brand-900/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/85 to-brand-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/20 to-transparent" />
+        <div className="absolute inset-0 bg-black/15" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-10 pt-44 sm:pt-56">
+        <div className="relative z-10 mx-auto flex w-full max-w-[1120px] flex-1 flex-col justify-center px-5 py-24 sm:py-28">
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gold-400">
+            <p className="text-xs font-semibold uppercase tracking-wide text-gold-600">
               {t("hero.eyebrow")}
             </p>
             <h1 className="mt-4 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl">
               {t("hero.headlineLead")}{" "}
-              <span className="text-gold-400">{t("hero.headlineHighlight")}</span>
+              <span className="text-gold-600">{t("hero.headlineHighlight")}</span>
             </h1>
             <p className="mt-4 text-white/80">{t("hero.subtitle")}</p>
 
@@ -72,8 +67,7 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <HeroFeatureStrip features={heroFeatures} />
+          <div className="mt-10 flex justify-start lg:justify-end">
             <PrayerTimesPanel data={prayerTimes} />
           </div>
         </div>
