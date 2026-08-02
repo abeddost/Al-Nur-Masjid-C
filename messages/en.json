@@ -1,0 +1,256 @@
+{
+  "nav": {
+    "home": "Home",
+    "mosque": "Mosque",
+    "aboutTheMosque": "About the mosque",
+    "quranSchool": "Quran school",
+    "footballTeam": "An-Nur football team",
+    "support": "Support & help",
+    "socialProjects": "Social projects",
+    "donationCampaign": "Donation campaign mosque",
+    "consulting": "Consulting & services",
+    "aboutUs": "About us",
+    "ourOrganisation": "Our organisation",
+    "articlesOfAssociation": "Articles of association",
+    "contact": "Contact & Directions"
+  },
+  "footer": {
+    "orgLine1": "Moschee An-Nur",
+    "orgLine2": "Afghan Islamic Cultural Association Wiesbaden and Surroundings e.V.",
+    "siteNotice": "Site notice",
+    "privacyPolicy": "Privacy policy"
+  },
+  "common": {
+    "readMore": "Read more",
+    "getInTouch": "Get in touch",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "cta": {
+    "visitUs": "Visit us",
+    "becomeMember": "Become a member",
+    "donate": "Donate"
+  },
+  "membership": {
+    "eyebrow": "Become a member",
+    "title": "Become a member of An-Nur",
+    "subtitle": "Join our association and help shape prayer life, education and community work at Mosque An-Nur.",
+    "form": {
+      "nameLabel": "Full name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone (optional)",
+      "messageLabel": "Message (optional)",
+      "submit": "Send request",
+      "submitting": "Sending…",
+      "successMessage": "Thank you! Your membership request has been sent — we'll get back to you soon.",
+      "errorMessage": "Something went wrong sending your request. Please try again or email us directly at info@afgkv.de."
+    }
+  },
+  "pages": {
+    "home": {
+      "introTitle": "An-Nur Mosque – Afghan Islamic Cultural Association Wiesbaden and Surroundings e.V.",
+      "introParagraphs": [
+        "An-Nur means light and hope: a place where people gather to live out their faith, share knowledge and work together toward a better future. Beyond daily prayer and spiritual life, our mosque and association make room for education, social support and cultural exchange.",
+        "Whatever brings you here – a question about Islam, a wish to learn more, or simply the search for community – you are welcome.",
+        "From Quran lessons for children and adults to inspiring events and social outreach, An-Nur is a place where faith and humanity stand at the centre. Come and become part of a network that holds together, supports and inspires."
+      ],
+      "features": [
+        {
+          "title": "Quran lessons",
+          "description": "Learn and deepen your knowledge of Islam – for every age group."
+        },
+        {
+          "title": "Events",
+          "description": "Inspiring events and activities for the whole family."
+        },
+        {
+          "title": "Donations and commitment",
+          "description": "Support our projects and get involved in the community."
+        },
+        {
+          "title": "Advice & help",
+          "description": "We are here for you – in social, religious and family matters."
+        },
+        {
+          "title": "Become a member",
+          "description": "Join our association and help shape our community."
+        }
+      ],
+      "communityTitle": "An-Nur – a place of community and faith",
+      "communityIntro": "Discover what our mosque and association have to offer – from spiritual moments in prayer to cultural and social projects that create space for encounter, learning and engagement.",
+      "galleryCaption1Title": "A place for everyone",
+      "galleryCaption1Text": "Our mosque offers space for encounter, dialogue and a strong sense of togetherness.",
+      "galleryCaption2Title": "Faith connects",
+      "galleryCaption2Text": "Experience diversity and community – open to all cultures and generations.",
+      "prayerTimes": {
+        "eyebrow": "Prayer times",
+        "nextPrayerLabel": "Next prayer:",
+        "poweredBy": "Prayer times powered by Mawaqit",
+        "unavailable": "Prayer times are currently unavailable.",
+        "viewOnMawaqit": "View on Mawaqit",
+        "fajr": "Fajr",
+        "shuruq": "Shuruq",
+        "dhuhr": "Dhuhr",
+        "asr": "Asr",
+        "maghrib": "Maghrib",
+        "isha": "Isha",
+        "jumua": "Jumu'ah"
+      },
+      "quranSchoolTeaser": {
+        "eyebrow": "Quran school",
+        "title": "Learning the Quran, together",
+        "text": "From the first letters to fluent recitation – our Quran school welcomes children and adults alike, in small groups with experienced teachers.",
+        "cta": "Explore the Quran school"
+      },
+      "newsTeaser": {
+        "eyebrow": "Latest news",
+        "title": "Our Ramadan programme is here",
+        "text": "Join us for nightly prayers, shared iftars and special Quran circles throughout Ramadan – open to the whole community."
+      },
+      "mapTitle": "Find us in Wiesbaden",
+      "mapSubtitle": "Drop by for prayer, a Quran lesson or simply to say hello – everyone is welcome.",
+      "visitUsButton": "Visit us"
+    },
+    "aboutMosque": {
+      "eyebrow": "About the mosque",
+      "title": "Our mosque – a place of faith and encounter in Wiesbaden",
+      "subtitle": "Freshly renovated and ready for the future – our mosque offers space for community, spirituality and new perspectives.",
+      "homeTitle": "A home for our community",
+      "homeIntro": "Our mosque in Wiesbaden is a place of faith and togetherness. Following a thorough refurbishment, it offers a warm and welcoming atmosphere for prayer, Quran lessons and events. It may not be ostentatious, but its simplicity is exactly what makes it an authentic meeting place for everyone who values community and faith."
+    },
+    "quranSchool": {
+      "eyebrow": "Mosque",
+      "title": "Quran school",
+      "subtitle": "Imparting Islamic knowledge for children and adults alike.",
+      "body": [
+        "Our Quran school gives children, young people and adults the chance to learn to read the Quran, understand its meaning and grow in their everyday practice of faith.",
+        "Classes are taught in small, age-appropriate groups by experienced teachers, with room for questions and open discussion alongside recitation and memorisation.",
+        "New pupils are welcome to join at any time – get in touch to find a group that fits."
+      ]
+    },
+    "socialProjects": {
+      "eyebrow": "Support & help",
+      "title": "Social projects",
+      "subtitle": "Supporting people and projects with heart and commitment.",
+      "body": [
+        "Solidarity is at the heart of our community. Through our social projects we support families, newcomers and people in need, both here in Wiesbaden and, where we can, back in Afghanistan.",
+        "Our volunteers organise food and clothing drives, offer practical everyday support and coordinate emergency aid whenever it is needed most.",
+        "If you would like to get involved as a volunteer or know someone who needs support, please reach out to us."
+      ]
+    },
+    "ourOrganisation": {
+      "eyebrow": "About us",
+      "title": "Our organisation",
+      "subtitle": "The history and people behind the association.",
+      "body": [
+        "The Afghan Islamic Cultural Association Wiesbaden and Surroundings e.V. was founded by members of the local Afghan community to give the growing congregation a permanent home for prayer, education and cultural life.",
+        "Today the association is carried by an active board and a wide circle of volunteers who plan events, coordinate community projects and keep the mosque running for everyone who relies on it.",
+        "We welcome new members who want to help shape the future of our community."
+      ]
+    },
+    "articlesOfAssociation": {
+      "eyebrow": "About us",
+      "title": "Articles of association",
+      "subtitle": "The basics and goals of our organisation.",
+      "sections": [
+        {
+          "heading": "§1 Name, location and founding year of the association",
+          "body": "Sets out the association's registered name, its seat in Wiesbaden, and the year it was founded."
+        },
+        {
+          "heading": "§2 Beliefs",
+          "body": "Describes the Islamic faith the association is built on and the values that guide its work."
+        },
+        {
+          "heading": "§3 Position of the association",
+          "body": "Explains the association's independence and its role within the wider community."
+        },
+        {
+          "heading": "§4 Purpose of the association",
+          "body": "Defines the association's charitable and religious purpose, including worship, education and social work."
+        },
+        {
+          "heading": "§5 Implementation of the association's purposes",
+          "body": "Describes the activities – prayer services, Quran lessons, events and social projects – through which the purposes are carried out."
+        },
+        {
+          "heading": "§6 Goals of the association",
+          "body": "Summarises the long-term goals: a lasting home for the community, stronger integration, and support for those in need."
+        }
+      ]
+    },
+    "footballTeam": {
+      "eyebrow": "Mosque",
+      "title": "An-Nur football team",
+      "subtitle": "Community, passion and team spirit – football at An-Nur.",
+      "body": [
+        "Sport brings our community together across generations. The An-Nur football team gives young people and adults a place to train, compete and build friendships outside the mosque.",
+        "The team trains regularly and takes part in local matches and tournaments throughout the year.",
+        "New players are always welcome – contact us to join a training session."
+      ]
+    },
+    "consulting": {
+      "eyebrow": "Support & help",
+      "title": "Consulting & services",
+      "subtitle": "Support in religious, social and legal matters.",
+      "body": [
+        "Not every question has an easy answer. Our advisors are here to help with questions about Islam, everyday family matters, and finding your way through social and legal processes in Germany.",
+        "Consultations are confidential and open to anyone in the community, regardless of background."
+      ]
+    },
+    "donation": {
+      "eyebrow": "Support & help",
+      "title": "Mosque’s fundraising campaign",
+      "subtitle": "An active contribution to our mosque and community.",
+      "body": [
+        "Our mosque and its programmes are entirely funded by the community. Every donation, large or small, goes directly toward prayer facilities, Quran lessons, events and social support.",
+        "You can support us with a one-time gift or a regular contribution – every contribution helps secure An-Nur's future."
+      ],
+      "bankDetailsTitle": "Bank transfer details",
+      "bankDetailsNote": "Example bank details — replace with your association's real account before publishing.",
+      "bankAccountHolder": "Account holder",
+      "bankReference": "Reference",
+      "bankReferenceValue": "Donation An-Nur",
+      "form": {
+        "nameLabel": "Full name",
+        "emailLabel": "Email",
+        "amountLabel": "Amount (€)",
+        "purposeLabel": "Purpose",
+        "purposeGeneral": "General fund",
+        "purposeMosque": "Mosque renovation",
+        "purposeQuranSchool": "Quran school",
+        "purposeSocial": "Social projects",
+        "submit": "Send pledge",
+        "submitting": "Sending…",
+        "successMessage": "Thank you for your pledge! We'll be in touch with the transfer details.",
+        "errorMessage": "Something went wrong sending your pledge. Please try again or email us directly at info@afgkv.de."
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Contact & Directions",
+      "subtitle": "We look forward to hearing from you.",
+      "body": [
+        "Whether you have a question about our programmes, want to get involved, or would simply like to visit – we're glad to hear from you."
+      ],
+      "addressLine1": "Mosque An-Nur",
+      "addressLine2": "65187 Wiesbaden, Germany"
+    },
+    "siteNotice": {
+      "title": "Site notice",
+      "body": [
+        "Afghan Islamic Cultural Association Wiesbaden and Surroundings e.V.",
+        "65187 Wiesbaden, Germany",
+        "Email: info@afgkv.de"
+      ]
+    },
+    "privacyPolicy": {
+      "title": "Privacy policy",
+      "body": [
+        "We take the protection of your personal data seriously. This site only processes the data necessary to provide its content and services, in line with applicable German and EU data protection law.",
+        "For questions about how your data is handled, please contact us at info@afgkv.de."
+      ]
+    }
+  }
+}

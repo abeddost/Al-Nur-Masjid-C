@@ -1,0 +1,256 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "mosque": "Moschee",
+    "aboutTheMosque": "Über die Moschee",
+    "quranSchool": "Koranschule",
+    "footballTeam": "An-Nur Fußballteam",
+    "support": "Unterstützung & Hilfe",
+    "socialProjects": "Soziale Projekte",
+    "donationCampaign": "Spendenkampagne Moschee",
+    "consulting": "Beratung & Services",
+    "aboutUs": "Über uns",
+    "ourOrganisation": "Unser Verein",
+    "articlesOfAssociation": "Vereinssatzung",
+    "contact": "Kontakt & Anfahrt"
+  },
+  "footer": {
+    "orgLine1": "Moschee An-Nur",
+    "orgLine2": "Afghanisch Islamischer Kulturverein Wiesbaden und Umgebung e.V.",
+    "siteNotice": "Impressum",
+    "privacyPolicy": "Datenschutz"
+  },
+  "common": {
+    "readMore": "Mehr erfahren",
+    "getInTouch": "Kontakt aufnehmen",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail"
+  },
+  "cta": {
+    "visitUs": "Besuchen Sie uns",
+    "becomeMember": "Mitglied werden",
+    "donate": "Spenden"
+  },
+  "membership": {
+    "eyebrow": "Mitglied werden",
+    "title": "Werden Sie Mitglied bei An-Nur",
+    "subtitle": "Treten Sie unserem Verein bei und gestalten Sie das Gebetsleben, die Bildungsarbeit und das Gemeinschaftsleben der Moschee An-Nur mit.",
+    "form": {
+      "nameLabel": "Vollständiger Name",
+      "emailLabel": "E-Mail",
+      "phoneLabel": "Telefon (optional)",
+      "messageLabel": "Nachricht (optional)",
+      "submit": "Anfrage senden",
+      "submitting": "Wird gesendet…",
+      "successMessage": "Vielen Dank! Ihre Mitgliedsanfrage wurde gesendet – wir melden uns bald bei Ihnen.",
+      "errorMessage": "Beim Senden ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@afgkv.de."
+    }
+  },
+  "pages": {
+    "home": {
+      "introTitle": "Moschee An-Nur – Afghanisch Islamischer Kulturverein Wiesbaden und Umgebung e.V.",
+      "introParagraphs": [
+        "An-Nur bedeutet Licht und Hoffnung: ein Ort, an dem Menschen zusammenkommen, um ihren Glauben zu leben, Wissen zu teilen und sich gemeinsam für eine bessere Zukunft einzusetzen. Neben dem täglichen Gebet bieten unsere Moschee und unser Verein Raum für Bildung, soziale Unterstützung und kulturellen Austausch.",
+        "Ob Fragen zum Islam, der Wunsch mehr zu erfahren oder einfach die Suche nach Gemeinschaft – bei uns sind Sie willkommen.",
+        "Vom Koranunterricht für Kinder und Erwachsene bis zu inspirierenden Veranstaltungen und sozialem Engagement: An-Nur ist ein Ort, an dem Glaube und Menschlichkeit im Mittelpunkt stehen. Werden Sie Teil eines Netzwerks, das zusammenhält, unterstützt und inspiriert."
+      ],
+      "features": [
+        {
+          "title": "Koranunterricht",
+          "description": "Islamisches Wissen lernen und vertiefen – für jede Altersgruppe."
+        },
+        {
+          "title": "Veranstaltungen",
+          "description": "Inspirierende Events und Aktivitäten für die ganze Familie."
+        },
+        {
+          "title": "Spenden und Engagement",
+          "description": "Unterstützen Sie unsere Projekte und engagieren Sie sich für die Gemeinschaft."
+        },
+        {
+          "title": "Beratung & Hilfe",
+          "description": "Wir sind für Sie da – in sozialen, religiösen und familiären Angelegenheiten."
+        },
+        {
+          "title": "Mitglied werden",
+          "description": "Werden Sie Teil unseres Vereins und gestalten Sie unsere Gemeinschaft mit."
+        }
+      ],
+      "communityTitle": "An-Nur – ein Ort der Gemeinschaft und des Glaubens",
+      "communityIntro": "Entdecken Sie, was unsere Moschee und unser Verein zu bieten haben – von spirituellen Momenten im Gebet bis zu kulturellen und sozialen Projekten, die Raum für Begegnung, Lernen und Engagement schaffen.",
+      "galleryCaption1Title": "Ein Ort für alle",
+      "galleryCaption1Text": "Unsere Moschee bietet Raum für Begegnung, Dialog und ein starkes Gemeinschaftsgefühl.",
+      "galleryCaption2Title": "Glaube verbindet",
+      "galleryCaption2Text": "Erleben Sie Vielfalt und Gemeinschaft – offen für alle Kulturen und Generationen.",
+      "prayerTimes": {
+        "eyebrow": "Gebetszeiten",
+        "nextPrayerLabel": "Nächstes Gebet:",
+        "poweredBy": "Gebetszeiten bereitgestellt von Mawaqit",
+        "unavailable": "Die Gebetszeiten sind derzeit nicht verfügbar.",
+        "viewOnMawaqit": "Auf Mawaqit ansehen",
+        "fajr": "Fadschr",
+        "shuruq": "Sonnenaufgang",
+        "dhuhr": "Dhuhr",
+        "asr": "Asr",
+        "maghrib": "Maghrib",
+        "isha": "Ischa",
+        "jumua": "Freitagsgebet"
+      },
+      "quranSchoolTeaser": {
+        "eyebrow": "Koranschule",
+        "title": "Gemeinsam den Koran lernen",
+        "text": "Von den ersten Buchstaben bis zur flüssigen Rezitation – unsere Koranschule heißt Kinder und Erwachsene in kleinen Gruppen mit erfahrenen Lehrkräften willkommen.",
+        "cta": "Koranschule entdecken"
+      },
+      "newsTeaser": {
+        "eyebrow": "Aktuelles",
+        "title": "Unser Ramadan-Programm steht",
+        "text": "Begleiten Sie uns bei nächtlichen Gebeten, gemeinsamen Iftars und besonderen Koran-Kreisen während des gesamten Ramadan – offen für die ganze Gemeinschaft."
+      },
+      "mapTitle": "Finden Sie uns in Wiesbaden",
+      "mapSubtitle": "Kommen Sie vorbei zum Gebet, zum Koranunterricht oder einfach auf ein Hallo – jeder ist willkommen.",
+      "visitUsButton": "Besuchen Sie uns"
+    },
+    "aboutMosque": {
+      "eyebrow": "Über die Moschee",
+      "title": "Unsere Moschee – ein Ort des Glaubens und der Begegnung in Wiesbaden",
+      "subtitle": "Frisch renoviert und bereit für die Zukunft – unsere Moschee bietet Raum für Gemeinschaft, Spiritualität und neue Perspektiven.",
+      "homeTitle": "Ein Zuhause für unsere Gemeinschaft",
+      "homeIntro": "Unsere Moschee in Wiesbaden ist ein Ort des Glaubens und des Zusammenhalts. Nach einer gründlichen Renovierung bietet sie eine einladende Atmosphäre für Gebete, Koranunterricht und Veranstaltungen. Sie ist nicht prunkvoll – gerade diese Schlichtheit macht sie zu einem authentischen Treffpunkt für alle, denen Gemeinschaft und Glaube wichtig sind."
+    },
+    "quranSchool": {
+      "eyebrow": "Moschee",
+      "title": "Koranschule",
+      "subtitle": "Vermittlung islamischen Wissens für Kinder und Erwachsene.",
+      "body": [
+        "Unsere Koranschule gibt Kindern, Jugendlichen und Erwachsenen die Möglichkeit, den Koran lesen zu lernen, seine Bedeutung zu verstehen und ihren Glauben im Alltag zu vertiefen.",
+        "Der Unterricht findet in kleinen, altersgerechten Gruppen bei erfahrenen Lehrkräften statt, mit Raum für Fragen und offenen Austausch neben Rezitation und Auswendiglernen.",
+        "Neue Schülerinnen und Schüler können jederzeit einsteigen – sprechen Sie uns an, um die passende Gruppe zu finden."
+      ]
+    },
+    "socialProjects": {
+      "eyebrow": "Unterstützung & Hilfe",
+      "title": "Soziale Projekte",
+      "subtitle": "Menschen und Projekte mit Herz und Engagement unterstützen.",
+      "body": [
+        "Zusammenhalt steht im Mittelpunkt unserer Gemeinschaft. Mit unseren sozialen Projekten unterstützen wir Familien, Neuankömmlinge und Menschen in Not – hier in Wiesbaden und, wo möglich, auch in Afghanistan.",
+        "Unsere Ehrenamtlichen organisieren Lebensmittel- und Kleiderspenden, bieten praktische Alltagshilfe und koordinieren Nothilfe, wenn sie am dringendsten gebraucht wird.",
+        "Wenn Sie sich ehrenamtlich engagieren möchten oder jemanden kennen, der Unterstützung braucht, melden Sie sich gerne bei uns."
+      ]
+    },
+    "ourOrganisation": {
+      "eyebrow": "Über uns",
+      "title": "Unser Verein",
+      "subtitle": "Die Geschichte und die Menschen hinter dem Verein.",
+      "body": [
+        "Der Afghanisch Islamische Kulturverein Wiesbaden und Umgebung e.V. wurde von Mitgliedern der örtlichen afghanischen Gemeinschaft gegründet, um der wachsenden Gemeinde ein dauerhaftes Zuhause für Gebet, Bildung und kulturelles Leben zu geben.",
+        "Heute wird der Verein von einem aktiven Vorstand und einem breiten Kreis Ehrenamtlicher getragen, die Veranstaltungen planen, Gemeinschaftsprojekte koordinieren und die Moschee für alle am Laufen halten.",
+        "Wir freuen uns über neue Mitglieder, die die Zukunft unserer Gemeinschaft mitgestalten möchten."
+      ]
+    },
+    "articlesOfAssociation": {
+      "eyebrow": "Über uns",
+      "title": "Vereinssatzung",
+      "subtitle": "Grundlagen und Ziele unseres Vereins.",
+      "sections": [
+        {
+          "heading": "§1 Name, Sitz und Gründungsjahr des Vereins",
+          "body": "Legt den eingetragenen Namen des Vereins, seinen Sitz in Wiesbaden und das Gründungsjahr fest."
+        },
+        {
+          "heading": "§2 Glaubensgrundlage",
+          "body": "Beschreibt die islamische Glaubensgrundlage, auf der der Verein aufbaut, sowie die leitenden Werte."
+        },
+        {
+          "heading": "§3 Stellung des Vereins",
+          "body": "Erläutert die Unabhängigkeit des Vereins und seine Rolle innerhalb der Gemeinschaft."
+        },
+        {
+          "heading": "§4 Zweck des Vereins",
+          "body": "Definiert den gemeinnützigen und religiösen Zweck, einschließlich Gottesdienst, Bildung und sozialer Arbeit."
+        },
+        {
+          "heading": "§5 Umsetzung des Vereinszwecks",
+          "body": "Beschreibt die Aktivitäten – Gebete, Koranunterricht, Veranstaltungen und soziale Projekte –, mit denen der Zweck umgesetzt wird."
+        },
+        {
+          "heading": "§6 Ziele des Vereins",
+          "body": "Fasst die langfristigen Ziele zusammen: ein dauerhaftes Zuhause für die Gemeinschaft, bessere Integration und Unterstützung für Bedürftige."
+        }
+      ]
+    },
+    "footballTeam": {
+      "eyebrow": "Moschee",
+      "title": "An-Nur Fußballteam",
+      "subtitle": "Gemeinschaft, Leidenschaft und Teamgeist – Fußball bei An-Nur.",
+      "body": [
+        "Sport verbindet unsere Gemeinschaft über Generationen hinweg. Das An-Nur Fußballteam bietet Jugendlichen und Erwachsenen einen Ort zum Trainieren, Wetteifern und Freundschaften schließen – abseits der Moschee.",
+        "Das Team trainiert regelmäßig und nimmt das ganze Jahr über an lokalen Spielen und Turnieren teil.",
+        "Neue Spieler sind immer willkommen – kontaktieren Sie uns für ein Probetraining."
+      ]
+    },
+    "consulting": {
+      "eyebrow": "Unterstützung & Hilfe",
+      "title": "Beratung & Services",
+      "subtitle": "Unterstützung in religiösen, sozialen und rechtlichen Fragen.",
+      "body": [
+        "Nicht jede Frage hat eine einfache Antwort. Unsere Berater helfen bei Fragen zum Islam, im Familienalltag und beim Zurechtfinden in sozialen und rechtlichen Angelegenheiten in Deutschland.",
+        "Die Beratung ist vertraulich und steht allen in der Gemeinschaft offen, unabhängig von der Herkunft."
+      ]
+    },
+    "donation": {
+      "eyebrow": "Unterstützung & Hilfe",
+      "title": "Spendenkampagne der Moschee",
+      "subtitle": "Ein aktiver Beitrag für unsere Moschee und Gemeinschaft.",
+      "body": [
+        "Unsere Moschee und ihre Angebote werden vollständig von der Gemeinschaft getragen. Jede Spende, ob groß oder klein, kommt direkt den Gebetsräumen, dem Koranunterricht, Veranstaltungen und sozialer Unterstützung zugute.",
+        "Sie können uns mit einer einmaligen Spende oder einem regelmäßigen Beitrag unterstützen – jeder Beitrag hilft, die Zukunft von An-Nur zu sichern."
+      ],
+      "bankDetailsTitle": "Bankverbindung",
+      "bankDetailsNote": "Beispielhafte Bankdaten — vor Veröffentlichung durch die echten Kontodaten Ihres Vereins ersetzen.",
+      "bankAccountHolder": "Kontoinhaber",
+      "bankReference": "Verwendungszweck",
+      "bankReferenceValue": "Spende An-Nur",
+      "form": {
+        "nameLabel": "Vollständiger Name",
+        "emailLabel": "E-Mail",
+        "amountLabel": "Betrag (€)",
+        "purposeLabel": "Zweck",
+        "purposeGeneral": "Allgemeiner Fonds",
+        "purposeMosque": "Renovierung der Moschee",
+        "purposeQuranSchool": "Koranschule",
+        "purposeSocial": "Soziale Projekte",
+        "submit": "Zusage senden",
+        "submitting": "Wird gesendet…",
+        "successMessage": "Vielen Dank für Ihre Zusage! Wir melden uns mit den Überweisungsdetails bei Ihnen.",
+        "errorMessage": "Beim Senden ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@afgkv.de."
+      }
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Kontakt & Anfahrt",
+      "subtitle": "Wir freuen uns, von Ihnen zu hören.",
+      "body": [
+        "Ob Sie Fragen zu unseren Angeboten haben, sich engagieren möchten oder uns einfach besuchen wollen – wir freuen uns auf Ihre Nachricht."
+      ],
+      "addressLine1": "Moschee An-Nur",
+      "addressLine2": "65187 Wiesbaden"
+    },
+    "siteNotice": {
+      "title": "Impressum",
+      "body": [
+        "Afghanisch Islamischer Kulturverein Wiesbaden und Umgebung e.V.",
+        "65187 Wiesbaden",
+        "E-Mail: info@afgkv.de"
+      ]
+    },
+    "privacyPolicy": {
+      "title": "Datenschutz",
+      "body": [
+        "Wir nehmen den Schutz Ihrer personenbezogenen Daten ernst. Diese Website verarbeitet nur die Daten, die zur Bereitstellung ihrer Inhalte und Dienste erforderlich sind, im Einklang mit dem geltenden deutschen und europäischen Datenschutzrecht.",
+        "Bei Fragen zum Umgang mit Ihren Daten kontaktieren Sie uns bitte unter info@afgkv.de."
+      ]
+    }
+  }
+}
