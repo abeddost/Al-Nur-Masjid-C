@@ -46,7 +46,7 @@ export default async function HomePage() {
           className="object-cover"
         />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-10 pt-44 sm:pt-56">
+        <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-20 pt-44 sm:pt-56">
           <div className="max-w-xl">
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-600">
               {t("hero.eyebrow")}
