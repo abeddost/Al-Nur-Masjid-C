@@ -95,7 +95,22 @@
         "asr": "عصر",
         "maghrib": "مغرب",
         "isha": "عشاء",
-        "jumua": "نماز جمعه"
+        "jumua": "نماز جمعه",
+        "viewFullTimetable": "مشاهده جدول کامل"
+      },
+      "hero": {
+        "eyebrow": "به مسجد النور خوش آمدید",
+        "headlineLead": "ایمان، آموزش و تعلق",
+        "headlineHighlight": "در ویسبادن",
+        "subtitle": "مسجدی پذیرا برای نماز، آموزش و اجتماع – برای همه باز است.",
+        "primaryCta": "دیدن ما",
+        "secondaryCta": "آموزش قرآن",
+        "features": [
+          { "icon": "/images/mitglieder.svg", "label": "اجتماعی پذیرا" },
+          { "icon": "/images/koran.svg", "label": "آموزش اسلامی" },
+          { "icon": "/images/spende.svg", "label": "خیریه و کمک" },
+          { "icon": "/images/veranstaltungen.svg", "label": "برنامه‌ها و فعالیت‌ها" }
+        ]
       },
       "quranSchoolTeaser": {
         "eyebrow": "مکتب قرآن",

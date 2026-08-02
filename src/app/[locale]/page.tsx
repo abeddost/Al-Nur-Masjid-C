@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import FeatureList from "@/components/FeatureList";
 import PrayerTimesPanel from "@/components/PrayerTimesPanel";
+import HeroFeatureStrip from "@/components/HeroFeatureStrip";
 import TeaserSection from "@/components/TeaserSection";
 import MapSection from "@/components/MapSection";
 import { getMawaqitPrayerTimes } from "@/lib/mawaqit";
+import { MAPS_DIRECTIONS_URL } from "@/config/location";
 
 export default async function HomePage() {
   const t = await getTranslations("pages.home");
@@ -22,21 +25,57 @@ export default async function HomePage() {
       ...f,
       icon: icons[i],
     }));
+  const heroFeatures = t.raw("hero.features") as {
+    label: string;
+    icon: string;
+  }[];
 
   return (
     <>
-      <section className="bg-brand-700 py-16">
-        <div className="mx-auto max-w-[1120px] px-5">
-          <div className="flex justify-center">
-            <Image
-              src="/images/logo-an-nur-full-neg.svg"
-              alt="Mosque An-Nur"
-              width={420}
-              height={140}
-              priority
-            />
+      <section className="relative flex min-h-[760px] flex-col justify-end overflow-hidden">
+        <Image
+          src="/hero-section.png"
+          alt="Prayer hall at Mosque An-Nur"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/75 to-brand-900/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/10 to-transparent" />
+
+        <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-10 pt-44 sm:pt-56">
+          <div className="max-w-xl">
+            <p className="text-xs font-semibold uppercase tracking-wide text-gold-400">
+              {t("hero.eyebrow")}
+            </p>
+            <h1 className="mt-4 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl">
+              {t("hero.headlineLead")}{" "}
+              <span className="text-gold-400">{t("hero.headlineHighlight")}</span>
+            </h1>
+            <p className="mt-4 text-white/80">{t("hero.subtitle")}</p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={MAPS_DIRECTIONS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-brand-900 hover:bg-gold-400"
+              >
+                {t("hero.primaryCta")}
+              </a>
+              <Link
+                href="/quran-school"
+                className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+              >
+                {t("hero.secondaryCta")}
+              </Link>
+            </div>
           </div>
-          <PrayerTimesPanel data={prayerTimes} />
+
+          <div className="mt-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <HeroFeatureStrip features={heroFeatures} />
+            <PrayerTimesPanel data={prayerTimes} />
+          </div>
         </div>
       </section>
 

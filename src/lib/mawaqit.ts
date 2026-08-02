@@ -10,6 +10,7 @@ export type PrayerTimes = {
   jumua: string | null;
   tomorrowFajr: string;
   timezone: string;
+  fullTimetableUrl: string;
 };
 
 function extractJsonObject(source: string, startIndex: number): string | null {
@@ -73,6 +74,7 @@ export async function getMawaqitPrayerTimes(): Promise<PrayerTimes | null> {
       jumua: data.jumua ?? null,
       tomorrowFajr,
       timezone: data.timezone || "Europe/Berlin",
+      fullTimetableUrl: `https://mawaqit.net/en/${MAWAQIT_SLUG}`,
     };
   } catch {
     return null;

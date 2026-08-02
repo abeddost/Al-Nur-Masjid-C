@@ -95,7 +95,22 @@
         "asr": "مازدیګر",
         "maghrib": "ماښام",
         "isha": "ماخستن",
-        "jumua": "د جمعې لمونځ"
+        "jumua": "د جمعې لمونځ",
+        "viewFullTimetable": "بشپړ مهالویش وګورئ"
+      },
+      "hero": {
+        "eyebrow": "د النور جومات ته ښه راغلاست",
+        "headlineLead": "ایمان، زده کړه او تړاو",
+        "headlineHighlight": "په ویسبادن کې",
+        "subtitle": "د لمانځه، زده کړې او ټولنې لپاره یو ښه راغلاست کوونکی جومات – د ټولو لپاره خلاص دی.",
+        "primaryCta": "موږ ولیدنه وکړئ",
+        "secondaryCta": "قرآني زده کړه",
+        "features": [
+          { "icon": "/images/mitglieder.svg", "label": "ښه راغلاست کوونکې ټولنه" },
+          { "icon": "/images/koran.svg", "label": "اسلامي زده کړه" },
+          { "icon": "/images/spende.svg", "label": "خیریه او مرسته" },
+          { "icon": "/images/veranstaltungen.svg", "label": "غونډې او فعالیتونه" }
+        ]
       },
       "quranSchoolTeaser": {
         "eyebrow": "قرآني ښوونځی",
