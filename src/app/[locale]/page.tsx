@@ -37,27 +37,27 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="relative flex min-h-[760px] flex-col justify-end overflow-hidden">
+      <section className="relative flex min-h-[600px] flex-col justify-end overflow-hidden lg:h-[760px]">
         <Image
           src={heroImageSrc}
           alt="Prayer hall at Mosque An-Nur"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_70%]"
         />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-20 pt-44 sm:pt-56">
+        <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-8 pt-24 sm:pt-28">
           <div className="max-w-xl">
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-600">
               {t("hero.eyebrow")}
             </p>
-            <h1 className="mt-4 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl">
+            <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl">
               {t("hero.headlineLead")}{" "}
               <span className="text-gold-600">{t("hero.headlineHighlight")}</span>
             </h1>
-            <p className="mt-4 text-white/80">{t("hero.subtitle")}</p>
+            <p className="mt-3 text-white/80">{t("hero.subtitle")}</p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href={MAPS_DIRECTIONS_URL}
                 target="_blank"
@@ -75,7 +75,7 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mt-8 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
             <HeroFeatureStrip features={heroFeatures} />
             <PrayerTimesPanel data={prayerTimes} />
           </div>
