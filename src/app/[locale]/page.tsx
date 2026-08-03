@@ -52,6 +52,7 @@ export default async function HomePage() {
           priority
           className="hidden object-cover object-[center_70%] lg:block"
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-900/40 via-brand-900/80 to-brand-900/95 lg:hidden" />
 
         <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-8 pt-24 sm:pt-28">
           <div className="max-w-xl">
