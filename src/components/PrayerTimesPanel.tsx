@@ -192,7 +192,7 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
     : "";
 
   return (
-    <div className="w-full max-w-md rounded-2xl border border-white/15 bg-brand-900/70 p-4 shadow-xl backdrop-blur-md sm:p-5">
+    <div className="w-full max-w-md rounded-2xl border border-white/15 bg-brand-900/70 p-3 shadow-xl backdrop-blur-md sm:p-5">
       <div className="flex items-center justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-white/70">
@@ -210,19 +210,19 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
         </a>
       </div>
 
-      <div className="mt-3 flex items-baseline justify-between gap-3">
+      <div className="mt-2 flex items-baseline justify-between gap-3 sm:mt-3">
         <p className="text-sm text-white/70">
           {t("nextPrayerLabel")}{" "}
           <span className="font-semibold text-gold-600">
             {next ? next.label : " "}
           </span>
         </p>
-        <p className="font-serif text-2xl font-bold tabular-nums text-white sm:text-3xl">
+        <p className="font-serif text-xl font-bold tabular-nums text-white sm:text-3xl">
           {diffMs !== null ? formatCountdown(diffMs) : "--:--:--"}
         </p>
       </div>
 
-      <div className="mt-3 flex items-center gap-3 lg:hidden">
+      <div className="mt-2 flex items-center gap-3 sm:mt-3 lg:hidden">
         <span className="h-px flex-1 bg-white/15" />
         <svg viewBox="0 0 20 20" fill="currentColor" className="h-3 w-3 text-gold-600/70">
           <path d="M10 2 11.6 7 17 7.8 13.2 11.4 14.2 17 10 14.3 5.8 17l1-5.6L3 7.8 8.4 7Z" />
@@ -230,23 +230,23 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
         <span className="h-px flex-1 bg-white/15" />
       </div>
 
-      <div className="mt-3 grid grid-cols-3 gap-x-2 gap-y-3 sm:grid-cols-6">
+      <div className="mt-2 grid grid-cols-3 gap-x-1.5 gap-y-2 sm:mt-3 sm:grid-cols-6 sm:gap-x-2 sm:gap-y-3">
         {prayers.map((p) => {
           const isNext = next !== null && p.key === next.key;
           return (
             <div key={p.key} className="text-center">
               <PrayerIcon
                 type={p.icon}
-                className={`mx-auto h-5 w-5 ${isNext ? "text-gold-600" : "text-white/50"}`}
+                className={`mx-auto h-4 w-4 sm:h-5 sm:w-5 ${isNext ? "text-gold-600" : "text-white/50"}`}
               />
               <p
-                className={`mt-1 text-[11px] font-semibold uppercase tracking-wide ${
+                className={`mt-1 text-[10px] font-semibold uppercase tracking-wide sm:text-[11px] ${
                   isNext ? "text-gold-600" : "text-white/60"
                 }`}
               >
                 {p.label}
               </p>
-              <p className="mt-0.5 font-serif text-lg font-semibold tabular-nums text-white">
+              <p className="mt-0.5 font-serif text-base font-semibold tabular-nums text-white sm:text-lg">
                 {p.time}
               </p>
               {isNext && (
@@ -257,7 +257,7 @@ export default function PrayerTimesPanel({ data }: { data: PrayerTimes | null })
         })}
       </div>
 
-      <div className="mt-3 flex items-center justify-center gap-1.5 rounded-full border-t border-white/10 pt-3 text-xs text-white/60">
+      <div className="mt-2 flex items-center justify-center gap-1.5 rounded-full border-t border-white/10 pt-2 text-xs text-white/60 sm:mt-3 sm:pt-3">
         <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 shrink-0">
           <path d="M10 2a6 6 0 0 0-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 0 0-6-6Zm0 8.2A2.2 2.2 0 1 1 10 5.8a2.2 2.2 0 0 1 0 4.4Z" />
         </svg>

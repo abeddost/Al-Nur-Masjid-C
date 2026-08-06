@@ -8,8 +8,8 @@ export const defaultLocale: Locale = "de";
 export const rtlLocales: ReadonlySet<Locale> = new Set(["fa", "ps"]);
 
 export const localeNames: Record<Locale, string> = {
-  de: "deutsch",
-  en: "english",
+  de: "Deutsch",
+  en: "English",
   fa: "فارسی",
   ps: "پښتو",
 };

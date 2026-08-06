@@ -6,23 +6,31 @@ export default function HeaderCtaButtons({
   className = "",
   onNavigate,
   overlay = false,
+  layout = "row",
 }: {
   className?: string;
   onNavigate?: () => void;
   overlay?: boolean;
+  layout?: "row" | "stack";
 }) {
   const t = useTranslations("cta");
+  const stack = layout === "stack";
+  const buttonShape = stack
+    ? "w-full justify-center rounded-xl px-5 py-3 text-sm"
+    : "whitespace-nowrap rounded-full px-4 py-2 text-xs";
 
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <div
+      className={`flex ${stack ? "flex-col items-stretch gap-3" : "items-center gap-2"} ${className}`}
+    >
       <a
         href={MAPS_DIRECTIONS_URL}
         target="_blank"
         rel="noopener noreferrer"
         className={
           overlay
-            ? "whitespace-nowrap rounded-full border border-white/40 px-4 py-2 text-xs font-semibold text-white hover:bg-white/10"
-            : "whitespace-nowrap rounded-full border border-brand-200 px-4 py-2 text-xs font-semibold text-brand-800 hover:bg-brand-50"
+            ? `flex items-center ${buttonShape} border border-white/40 font-semibold text-white hover:bg-white/10`
+            : `flex items-center ${buttonShape} border border-brand-200 font-semibold text-brand-800 hover:bg-brand-50`
         }
       >
         {t("visitUs")}
@@ -32,8 +40,8 @@ export default function HeaderCtaButtons({
         onClick={onNavigate}
         className={
           overlay
-            ? "whitespace-nowrap rounded-full bg-white/15 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm hover:bg-white/25"
-            : "whitespace-nowrap rounded-full bg-brand-700 px-4 py-2 text-xs font-semibold text-white hover:bg-brand-600"
+            ? `flex items-center ${buttonShape} bg-white/15 font-semibold text-white backdrop-blur-sm hover:bg-white/25`
+            : `flex items-center ${buttonShape} bg-brand-700 font-semibold text-white hover:bg-brand-600`
         }
       >
         {t("becomeMember")}
@@ -41,7 +49,7 @@ export default function HeaderCtaButtons({
       <Link
         href="/donation-campaign-mosque"
         onClick={onNavigate}
-        className="whitespace-nowrap rounded-full bg-gold-500 px-4 py-2 text-xs font-semibold text-brand-900 hover:bg-gold-400"
+        className={`flex items-center ${buttonShape} bg-gold-500 font-semibold text-brand-900 hover:bg-gold-400`}
       >
         {t("donate")}
       </Link>
